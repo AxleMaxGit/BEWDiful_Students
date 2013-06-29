@@ -47,15 +47,15 @@ end
 #method validates the guess range, checks the answer decrements the counter for rounds left
 def guess
 
-	puts "Please guess a number between 1 and 10. You have #{$rounds_to_play} guesses remaining"
+	puts "Please guess a number between #{$num_range_low} and #{$num_range_high}. You have #{$rounds_to_play} guesses remaining"
 	guess = gets.chomp.to_i
 
-	if guess < 1 || guess > 10
+	if guess < $num_range_low || guess > $num_range_high
 		puts "Epic fail!!! Your guess was not legit"
 		return
 	else
 		check_ans(guess)
-		$rounds_to_play = $rounds_to_play - 1
+		$rounds_to_play -= 1
 	end
 end
 
@@ -72,13 +72,15 @@ def check_ans (guess)
 end
 
 #set the constants
-$secret_number = 8
+$num_range_low = 1
+$num_range_high = 10
+$secret_number = 4
 
 #Set the number of guesses allowed
-$rounds_to_play = 3
+$rounds_to_play = 5
 
 #greet the player
-greeting
+#greeting
 
 #play the game
 while $rounds_to_play > 0 do
