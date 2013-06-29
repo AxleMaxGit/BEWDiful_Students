@@ -35,4 +35,55 @@
 # Remember to cast input from the Player into the appropriate data type.
 #
 ###############################################################################
+#method to greet thre player
+def greeting
+	puts "Welcome to the Secret Number Game \n"
+	puts "Written by AxleMax\n"
+	puts "\nPlease type your name\n"
+	$name = gets
+	puts "Hi #{$name}"
+end
 
+#method validates the guess range, checks the answer decrements the counter for rounds left
+def guess
+
+	puts "Please guess a number between 1 and 10. You have #{$rounds_to_play} guesses remaining"
+	guess = gets.chomp.to_i
+
+	if guess < 1 || guess > 10
+		puts "Epic fail!!! Your guess was not legit"
+		return
+	else
+		check_ans(guess)
+		$rounds_to_play = $rounds_to_play - 1
+	end
+end
+
+#method to check if the guess is correct
+def check_ans (guess)
+	if guess < $secret_number
+		puts "That's not it, your guess is too low"
+	elsif guess > $secret_number
+		puts "That's not it, your guess is too high"
+	else
+		puts "You win!! Well played #{$name}"
+		exit
+	end
+end
+
+#set the constants
+$secret_number = 8
+
+#Set the number of guesses allowed
+$rounds_to_play = 3
+
+#greet the player
+greeting
+
+#play the game
+while $rounds_to_play > 0 do
+   guess
+end
+
+#Lose the game if the guesses run out
+puts "\n!!!!! You are out of guesses. You lose !!!!! The secret number was #{$secret_number}\n\n"
