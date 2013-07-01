@@ -80,7 +80,7 @@ $secret_number = 4
 $rounds_to_play = 5
 
 #greet the player
-#greeting
+greeting
 
 #play the game
 while $rounds_to_play > 0 do
