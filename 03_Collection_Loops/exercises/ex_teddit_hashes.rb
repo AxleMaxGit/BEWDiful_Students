@@ -52,9 +52,10 @@ puts "Welcome to Teddit"
 
 stories = []
 q = 0
+chkbit = 0
 
 #This is a nominal number of records to go in the array
-while q < 2
+while chkbit == 0
 
 	stories[q] = {}
 
@@ -70,8 +71,13 @@ while q < 2
 	votes = get_input
 	stories[q][:votes] = votes
 
+	puts "Would you like to add another story? Enter 'y' or 'n'"
+	another = get_input
+	if another == "n"
+		puts "N"
+		chkbit += 1
+	end
 	q += 1
-
 end
 
 puts "Your votes were: "
