@@ -1,3 +1,4 @@
+
 # Step 1: Working with Arrays and Hashes
 
 # Copy your solution from conditional_teddit.rb. 
@@ -15,3 +16,74 @@
 # Once the user is finished with entering their stories, use .each to print each story in the stories array. 
 #
 #
+#If the Story is about cats multiply the upvotes by 5
+# If the Story is about bacon multiply the upvotes by 8
+# If the Story is about Food it gets 3 times the upvotes.
+
+
+def get_input
+	gets.chomp	
+end
+
+def multiply_votes (story_title, story_cat, votes)
+	count = votes.to_i
+	if story_title.include?("cats") || story_cat == "cats"
+		count *= 5
+	end
+
+	if story_title.include?("bacon") || story_cat == "bacon"
+		count *= 8
+	end
+
+	if story_title.include?("food") || story_cat == "food"
+		count *= 3
+	end
+
+	if count == votes
+		return count
+	end	
+
+	return count
+	
+end	
+
+
+puts "Welcome to Teddit"
+
+stories = []
+q = 0
+
+#This is a nominal number of records to go in the array
+while q < 2
+
+	stories[q] = {}
+
+	puts "Give me a story title please"
+	story_title = get_input
+	stories[q][:title] = story_title
+
+	puts "what category is this story in?"
+	story_cat = get_input
+	stories[q][:cat] = story_cat
+
+	puts "How many votes do you award?"
+	votes = get_input
+	stories[q][:votes] = votes
+
+	q += 1
+
+end
+
+puts "Your votes were: "
+puts stories
+
+
+stories.each_index {|x| 	
+					story_title = stories[x][:title]
+					story_cat = stories[x][:cat]
+					votes = stories[x][:votes] 
+					puts "You added a story called \"#{story_title}\", it is in the #{story_cat} category"
+					puts "This story got #{multiply_votes("#{story_title}", "#{story_cat}", votes)} votes"
+				}
+
+
