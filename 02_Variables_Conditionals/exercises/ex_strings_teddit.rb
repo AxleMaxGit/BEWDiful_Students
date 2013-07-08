@@ -24,6 +24,10 @@ def get_input
 	gets.chomp	
 end
 
+def method_name
+	
+end
+
 puts "Welcome to Teddit"
 puts "Give me a story title please"
 StoryTitle = get_input
