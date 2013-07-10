@@ -43,3 +43,52 @@
 # Student's Solution:
 #
 ################################################################################
+
+$LOAD_PATH.unshift
+
+
+class Employee
+	attr_accessor :first_name, :last_name
+
+	def initialize(first_name, last_name)
+		@first_name = first_name
+		@last_name = last_name
+	end
+
+	def full_name
+		"#{@first_name} #{last_name}"
+	end
+end
+
+class Manager < Employee
+
+	attr_accessor :title, :first_name, :last_name
+
+	def initialize(title, first_name, last_name)
+		@title = title
+		super(first_name, last_name)
+	end
+
+	def full_name
+		"#{super} (#{title})"
+	end
+
+end
+
+
+rupert = Manager.new("CEO", "Rupert", "Murdoch")
+
+puts rupert.full_name
+
+
+
+
+
+
+
+
+
+
+
+
+

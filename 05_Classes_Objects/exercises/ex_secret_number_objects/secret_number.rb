@@ -39,3 +39,94 @@
 # Add helpful comments to your code to document what each section does.
 # 
 # Tips: Copy paste your code from homework 1 where necessary. 
+
+class Main
+
+	#not sure if this constructor in necessary
+	def initialize
+		self.greeting
+		self.req_name
+		self.begin_game
+	end
+
+	#tell the player who made it.
+
+	def greeting
+		puts "Welcome to the Secret Number Game \n"
+		puts "Written by AxleMax\n\n"
+	end
+
+	#Ask the player for their name 
+	def req_name
+		puts "What is your name?"
+		@name = gets.chomp
+	end
+	
+	#instantiate the Game class
+	def begin_game
+		Game.new(@name)
+	end
+
+end
+
+class Secret_Number
+
+	#initiate an array of numbers that range between 1 - 10
+
+	#select a random element from that array as the secret number
+
+end
+
+class Game
+
+	#Welcome players and inform them of the game rules.
+	def initialize(name) 
+			puts "Welcome to the game #{name}"
+			Player.new(name)
+	end
+
+	#Initialize the Player class.
+
+	class Player
+
+		attr_accessor :name
+		#player.name = "#{name}"
+		#player.name #=> Returns your value
+
+		def initialize(name)
+			@name = name
+			puts self.name
+			#player.name = "#{name}"
+			#player.name = @name
+			#person.name = "Alex"
+			#puts "test"
+		end
+	
+  		#player = Player.new
+
+
+  		#person = Person.new
+		
+
+		
+
+	end	
+
+	#Initialize the Secret Number class.
+
+	#Prompt the user to choose a number, verify if the user guessed correctly.
+
+	#If the user guesses incorrectly let them know if they were too high or too low.
+
+	#Monitor how many guesses the player has before the game is over.
+
+end
+
+class Player
+	#initialize the player's name
+	#use @name as player's object name
+
+end
+
+m = Main.new
+
