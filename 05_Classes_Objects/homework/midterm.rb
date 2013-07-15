@@ -34,14 +34,13 @@ puts vh.rem_leading_at
 #get the timeline from the user
 timeline = Twitter.user_timeline(tname)
 
-
 puts "@#{tname} there are #{timeline.length} tweets in your timeline"
 puts "How many of your tweets do you want to see?"
 treturn = gets.chomp.to_i
 
 #validate the response in a sensible number
 if treturn < 1 || treturn > timeline.length
-	puts "Epic fail!!! Your guess was not legit"
+	puts "Epic fail!!! Select a valid number of tweets to display."
 else
 	count = 0
 	while count < treturn
@@ -50,8 +49,6 @@ else
 		count += 1
 	end
 end
-
-
 
 
 
