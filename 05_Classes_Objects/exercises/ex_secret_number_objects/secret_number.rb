@@ -96,20 +96,7 @@ class Game
 		def initialize(name)
 			@name = name
 			puts self.name
-			#player.name = "#{name}"
-			#player.name = @name
-			#person.name = "Alex"
-			#puts "test"
 		end
-	
-  		#player = Player.new
-
-
-  		#person = Person.new
-		
-
-		
-
 	end	
 
 	#Initialize the Secret Number class.
