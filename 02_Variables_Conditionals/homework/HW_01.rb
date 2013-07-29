@@ -35,6 +35,7 @@
 # Remember to cast input from the Player into the appropriate data type.
 #
 ###############################################################################
+<<<<<<< HEAD
 #method to greet thre player
 def greeting
 	puts "Welcome to the Secret Number Game \n"
@@ -89,3 +90,6 @@ end
 
 #Lose the game if the guesses run out
 puts "\n!!!!! You are out of guesses. You lose !!!!! The secret number was #{$secret_number}\n\n"
+=======
+
+>>>>>>> teacher/master

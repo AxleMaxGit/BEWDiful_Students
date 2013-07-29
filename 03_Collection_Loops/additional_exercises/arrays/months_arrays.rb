@@ -17,6 +17,7 @@
 
 # 4. Remove and display the last value in the months array.
 # Was April and May removed why or why not.
+<<<<<<< HEAD
 
 #create array
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September"]
@@ -93,3 +94,5 @@ months.each { |a| puts a + "OOO" }
 #<arrayname>.shift removes first item in array and returns removed item
 
 #<arrayname>.unshift adds item to start of array 
+=======
+>>>>>>> teacher/master

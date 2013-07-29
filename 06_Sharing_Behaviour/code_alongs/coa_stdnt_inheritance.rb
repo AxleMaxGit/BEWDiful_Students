@@ -43,6 +43,7 @@
 # Student's Solution:
 #
 ################################################################################
+<<<<<<< HEAD
 
 $LOAD_PATH.unshift
 
@@ -92,3 +93,5 @@ puts rupert.full_name
 
 
 
+=======
+>>>>>>> teacher/master

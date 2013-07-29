@@ -38,6 +38,7 @@
 # In creating your game, make sure it has arrays, hashes and all functionality is wrapped in methods.
 # Add helpful comments to your code to document what each section does.
 # 
+<<<<<<< HEAD
 # Tips: Copy paste your code from homework 1 where necessary. 
 
 class Main
@@ -117,3 +118,6 @@ end
 
 m = Main.new
 
+=======
+# Tips: Copy paste your code from homework 1 where necessary. 
+>>>>>>> teacher/master

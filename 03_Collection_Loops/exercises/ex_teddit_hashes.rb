@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> teacher/master
 # Step 1: Working with Arrays and Hashes
 
 # Copy your solution from conditional_teddit.rb. 
@@ -15,6 +18,7 @@
 # Use a loop, so that your program continues to ask a user for stories until they chose to quit. ("Would you like to add another story? Enter 'y' or 'n'")
 # Once the user is finished with entering their stories, use .each to print each story in the stories array. 
 #
+<<<<<<< HEAD
 #
 #If the Story is about cats multiply the upvotes by 5
 # If the Story is about bacon multiply the upvotes by 8
@@ -93,3 +97,6 @@ stories.each_index {|x|
 				}
 
 
+=======
+#
+>>>>>>> teacher/master

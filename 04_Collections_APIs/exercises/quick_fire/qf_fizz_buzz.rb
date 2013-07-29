@@ -9,6 +9,7 @@ end
 #
 # Your code here
 
+<<<<<<< HEAD
 #counter = 0
 
 
@@ -23,6 +24,8 @@ def fizzbuzz (counter)
 		counter
 	end
 end
+=======
+>>>>>>> teacher/master
 
 # Tests
 assert_equal fizzbuzz(1), 1
@@ -33,7 +36,13 @@ assert_equal fizzbuzz(15), "FizzBuzz"
 assert_equal fizzbuzz(5175), "FizzBuzz"
 
 # uncomment this code when your tests pass
+<<<<<<< HEAD
 1.upto(100) do |number|
   puts fizzbuzz(number)
 end
 
+=======
+#1.upto(100) do |number|
+#  puts fizzbuzz(number)
+#end
+>>>>>>> teacher/master

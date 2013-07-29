@@ -11,6 +11,7 @@ def ___(*arguments)
 end
 
 # Create an empty array named categories using a literal
+<<<<<<< HEAD
 categories = []
 assert_equal categories, []
 
@@ -22,26 +23,55 @@ assert_equal categories, []
 categories.push("Music")
 categories.unshift("Weather")
 categories << ("Florida")
+=======
+categories = ___
+assert_equal categories, []
+
+# Create an empty array named categories using Array's #new method
+categories = ___
+assert_equal categories, []
+
+# Add 3 stories to the categories array. Each time using a different method.
+categories.___("Music")
+categories.___("Weather")
+categories.___("Florida")
+>>>>>>> teacher/master
 assert_equal ["Florida", "Music", "Weather"], categories.sort
 
 # Ensure only unique categories get stored
 categories << "Florida"
+<<<<<<< HEAD
 categories.uniq!
+=======
+categories.___!
+>>>>>>> teacher/master
 assert_equal ["Florida", "Music", "Weather"], categories.sort
 
 # Write a conditional that adds "Family" to the category list if it includes both Animals, and Shopping
 categories << "Animals" 
 
+<<<<<<< HEAD
 if categories.include?("Animals") && categories << "Animals"
   categories << "Family" 
 end
 
 assert_equal(true, categories.include?("Family"))
+=======
+if ___
+  categories << "Family" 
+end
+
+assert_equal(false, categories.include?("Family"))
+>>>>>>> teacher/master
 
 categories << "Shopping" 
 
 #repeat check here
+<<<<<<< HEAD
 if categories.include?("Animals") && categories << "Animals"
+=======
+if ___
+>>>>>>> teacher/master
   categories << "Family" 
 end
 
@@ -49,6 +79,7 @@ assert_equal(true, categories.include?("Family"))
 
 # Print all of the Array elements as a comma separated string in alphabetical order
 # persist the sorting of categories 
+<<<<<<< HEAD
 assert_equal("Animals, Family, Florida, Music, Shopping, Weather", categories.uniq!.sort!.join(", "))
 assert_equal(%w(Animals Family Florida Music Shopping Weather), categories)
 
@@ -64,6 +95,21 @@ assert_equal(5, categories.length) # get it's length
 last_category = categories.last
 assert_equal("Last Category: Weather", "Last Category: #{last_category}")
 assert_equal(4, categories.length) # get it's length
+=======
+assert_equal("Animals, Family, Florida, Music, Shopping, Weather", categories.___.___)
+assert_equal(%w(Animals Family Florida Music Shopping Weather), categories)
+
+# Remove the first category from the array and print it to the screen "First Category: Category here"
+first_category = categories.___
+assert_equal("First Category: Animals", "First Category: #{first_category}")
+assert_equal(5, categories.___) # get it's length
+
+# Remove the newest category from the array, print it to the screen "Last Category: Category here"
+
+last_category = categories.___
+assert_equal("Last Category: Weather", "Last Category: #{last_category}")
+assert_equal(4, categories.___) # get it's length
+>>>>>>> teacher/master
 
 # Write a conditional that clears the array if there are more than 5 categories and adds "Misc" to it.
 

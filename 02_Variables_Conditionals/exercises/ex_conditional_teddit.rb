@@ -8,6 +8,7 @@
 #For example:
 # "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
 
+<<<<<<< HEAD
 def get_input
 	gets.chomp	
 end
@@ -28,3 +29,5 @@ votes = get_input
 
 puts "You added a story called \"#{story_title}\", it is in the #{story_cat} category"
 puts "This story got #{multiply_votes(story_cat, votes)} votes"
+=======
+>>>>>>> teacher/master

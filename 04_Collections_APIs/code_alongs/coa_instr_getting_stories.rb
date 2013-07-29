@@ -1,6 +1,7 @@
 # Get a feed of the stories from reddit and print them to STDOUT
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #REQUIREMENTS
 #get json from reddit
 #parse json into a ruby hash
@@ -108,6 +109,8 @@ print_stories(response["data"]["feed"])
 
 
 =======
+=======
+>>>>>>> teacher/master
 require 'httpi'
 require 'json'
 
@@ -176,5 +179,8 @@ end
 print_stories normalize_reddit_feed
 print_stories normalize_mashable_feed
 print_stories normalize_digg_feed
+<<<<<<< HEAD
+>>>>>>> teacher/master
+=======
 >>>>>>> teacher/master
 

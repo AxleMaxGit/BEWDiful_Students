@@ -20,6 +20,7 @@
 # 	User enters: ecological
 # 	New story added! Bear feels remorse for stealing candy from baby, Category: Ecological, Current Upvotes: 1
 
+<<<<<<< HEAD
 def get_input
 	gets.chomp	
 end
@@ -36,3 +37,5 @@ StoryCat = get_input
 puts "You added a story called \"#{StoryTitle}\", it is in the #{StoryCat} category"
 
 
+=======
+>>>>>>> teacher/master

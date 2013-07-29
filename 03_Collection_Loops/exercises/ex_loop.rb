@@ -10,6 +10,7 @@
 # 1 bottle of beer!
 # You take one down and pass it around,
 # No more bottles of beer on the wall :-(
+<<<<<<< HEAD
 
 
 
@@ -31,3 +32,5 @@ end
 
 puts "No more bottles of beer on the wall :-(\n\n"
 
+=======
+>>>>>>> teacher/master
