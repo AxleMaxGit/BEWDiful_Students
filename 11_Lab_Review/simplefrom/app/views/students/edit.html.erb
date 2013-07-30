@@ -1,0 +1,24 @@
+<H1>Edit</h1>
+
+<%= form_for @student do |f| %>
+
+<div class="large-4 columns">
+	<div>
+		<%= f.text_field :fname %>
+	</div>
+
+	<div>
+		<%= f.text_field :lname %>
+	</div>
+
+
+<%= f.submit %> 
+
+</div>
+
+<%= link_to 'Destroy', @student, method: :destroy %>
+
+
+<% end %>
+
+

@@ -1,0 +1,18 @@
+<h1>Index: </h1>
+
+<ul>
+	<% @students.each do |student| %>
+		<li>
+			<%= student.fname %> <%= student.lname %>
+			<%= link_to 'Edit', edit_student_path(student) %>
+			<%= link_to 'Destroy', student_path(student, _method: :destroy)  %>
+			<%= link_to 'Destroy', student, method: :destroy  %>
+		</li>
+	<% end %>
+</ul>
+
+
+<p>
+
+
+</p>

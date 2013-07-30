@@ -1,0 +1,25 @@
+<p>Enter new student information</p>
+</hr>
+
+<%= form_for @student do |f| %>
+
+    <%= label_tag(:q, "First Name: ") %>
+    <%= f.text_field :fname %><br />
+
+    <%= label_tag(:q, "Last Name: ") %>
+    <%= f.text_field :lname %><br />
+
+    <%= f.submit %>
+<% end %>
+
+</hr>
+
+<p>Display all students' information </p><br />
+<% if !@students.blank? %>
+  <% for item in @students %>
+    <%= item.fname %> <%= item.lname %> <br />
+  <% end %>
+
+<% else %>
+
+<% end %>  
