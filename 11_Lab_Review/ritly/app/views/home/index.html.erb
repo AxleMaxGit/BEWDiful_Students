@@ -1,0 +1,12 @@
+<H1>Rit.ly Home</H1>
+
+<%= form_for @shorturl do |s| %>
+	
+	<div>
+		<%= s.label :userurl %>
+		<%= s.text_field :userurl %>
+	</div>
+	
+	<%= s.submit %> 
+
+	<% end %>

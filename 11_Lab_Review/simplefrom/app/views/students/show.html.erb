@@ -1,3 +1,10 @@
-<h1>Show</h1>
+<h1>User Page</h1>
+
 
 <%= @student.fname %> <%= @student.lname %>
+
+<br />
+
+<h3>
+<%= link_to 'Return to index', student_path(@student) %>
+</h3>
