@@ -1,4 +1,6 @@
-<H2>Movie Page - <%= @movie.title %></h2>
+<h1>Movie Titles Including <%= @searchterm %> </h1>
+
+
 
 <table>
   <thead>
@@ -10,28 +12,21 @@
       <th width="70" </th>
     </tr>
   </thead>
+
+
   <tbody>
+  	<% @movies.each do |movie| %>
 	    <tr>
-	      <td><%= @movie.title %></td>
-	      <td><%= @movie.description %></td>
-	      <td><%= @movie.year_released %></td>
-	      <td><%= link_to 'Edit', edit_movie_path %></td>
-	      <td><%= link_to 'Delete', @movie, method: :delete  %></td>
+	      <td><%= link_to movie.title, movie_path(movie) %></td>
+	      <td><%= movie.description %></td>
+	      <td><%= movie.year_released %></td>
+	     
 	    </tr>
+	<% end %>
   </tbody>
 </table>
 
-<br /><br />
 
 <h3>
 <%= link_to 'Return to index', movies_path %>
 </h3>
-
-
-
-
-
-
-
-
-

@@ -1,2 +1,36 @@
-<h1>Movies Index</h1>
+<h1>Movie List</h1>
+
+<%= form_tag search_path do %>
+	
+	<%= text_field_tag 'search' %>
+	<%= submit_tag 'Go' %>
+	
+<% end %>
+
+
+
+<table>
+
+    <% @movies.each do |mov| %>
+
+    <tr>
+
+        <td><%= link_to mov.title, movie_path(mov) %></td>
+        <td><%= mov.description %></td>
+        <td><%= mov.year_released %></td>
+        
+   	</tr>
+    <% end %>
+
+</table>
+
+<h3>
+<%= link_to 'Add a Movie', new_movie_path %>
+</h3>
+
+
+
+
+
+
 

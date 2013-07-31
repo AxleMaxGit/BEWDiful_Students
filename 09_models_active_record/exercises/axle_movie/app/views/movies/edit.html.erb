@@ -1,0 +1,26 @@
+<h1>Edit Movie</h1>
+
+<%= form_for @movie do |f| %>
+
+<div class="large-4 columns">
+	<div>
+		<%= f.text_field :title %>
+	</div>
+
+	<div>
+		<%= f.text_field :description %>
+	</div>
+
+	<div>
+		<%= f.text_field :year_released %>
+	</div>
+
+<%= f.submit %> 
+
+</div>
+<% end %>
+
+<br /><br />
+<h3>
+<%= link_to 'Return to index', movies_path %>
+</h3>

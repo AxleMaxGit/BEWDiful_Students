@@ -1,0 +1,24 @@
+<h1>Add New Movie</h1>
+
+
+
+<p>Enter new movie information</p>
+</hr>
+
+<%= form_for @movie do |f| %>
+
+    <%= label_tag(:q, "Title: ") %>
+    <%= f.text_field :title %><br />
+
+    <%= label_tag(:q, "Description: ") %>
+    <%= f.text_field :description %><br />
+
+    <%= label_tag(:q, "Year Released: ") %>
+    <%= f.text_field :year_released %><br />
+
+    <%= f.submit %>
+<% end %>
+
+<h3>
+<%= link_to 'Return to index', movies_path %>
+</h3>
