@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-
+  before_action :authenticate_user!, :only => [:new]
 
   def index #retrieves all records from the database
     @movies = Movie.all

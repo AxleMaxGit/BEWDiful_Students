@@ -1,31 +1,35 @@
-<h3>
-<%= link_to 'Return to index', student_path(@student) %>
-</h3>
 
 
-<p>Enter new student information</p>
-</hr>
+	<h3>
+	<%= link_to 'Return to index', student_path(@student) %>
+	</h3>
 
-<%= form_for @student do |f| %>
 
-    <%= label_tag(:q, "First Name: ") %>
-    <%= f.text_field :fname %><br />
+	<p>Enter new student information</p>
+	</hr>
 
-    <%= label_tag(:q, "Last Name: ") %>
-    <%= f.text_field :lname %><br />
+	<%= form_for @student do |f| %>
 
-    <%= f.submit %>
-<% end %>
+	    <%= label_tag(:q, "First Name: ") %>
+	    <%= f.text_field :fname %><br />
 
-</hr>
-<br />
+	    <%= label_tag(:q, "Last Name: ") %>
+	    <%= f.text_field :lname %><br />
 
-<p>Current Student List: </p>
-<% if !@students.blank? %>
-  <% for item in @students %>
-    <%= item.fname %> <%= item.lname %> <br />
-  <% end %>
+	    <%= f.submit %>
+	<% end %>
 
-<% else %>
+	</hr>
+	<br />
 
-<% end %>  
+	<p>Current Student List: </p>
+	<% if !@students.blank? %>
+	  <% for item in @students %>
+	    <%= item.fname %> <%= item.lname %> <br />
+	  <% end %>
+
+	<% else %>
+
+	<% end %>  
+
+	
