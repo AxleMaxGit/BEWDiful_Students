@@ -15,7 +15,7 @@ class StoriesController < ApplicationController
 
 
   def create
-    @story = Story.new params.require(:story).permit(:headline, :content)
+    @story = current_user.stories.new params.require(:story).permit(:headline, :content)
     if @story.save
       redirect_to story_path(@story), :notice => "Story successfully created"
     else
