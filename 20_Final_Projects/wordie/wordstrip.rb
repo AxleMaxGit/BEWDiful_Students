@@ -28,9 +28,9 @@ words.each {|x|
   #sort the hash to show highest counts first
   top_words_sort = top_words.sort_by {|_key, value| value}.reverse
 
-  top_words_sort.each 
-    if <condition> 
+  # top_words_sort.each 
+  #   if <condition> 
       
-    end
+  #   end
   #puts words[0] + " " + words[1]
-  #puts top_words
+  puts top_words.methods.sort

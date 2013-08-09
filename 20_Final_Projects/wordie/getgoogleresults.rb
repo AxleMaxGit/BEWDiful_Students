@@ -5,4 +5,4 @@ results = Google::Search::Web.new(:query => "Enterprise Architecture")
  
 puts results
 
-#results.each { |r|  puts r.uri }
+results.each { |r|  puts r.uri }

@@ -1,0 +1,45 @@
+screen:console
+
+rails new wordtest
+cd wordtest
+rals server
+
+screen:open a new console
+
+cd wordtest
+
+file:config->routes.rb
+
+root 'words#index' 
+resources :words
+
+screen:console
+
+rails generate controller words
+
+file words_controller.rb
+
+def index
+  	@word = Word.new
+end
+
+screen:console
+
+rails generate model word search_term:string
+
+##Note model name must be singular "word"
+
+createfile:index.html.erb
+
+<h1>Enter a search term</h1>
+
+<%= form_for @word do |f| %>
+
+  <%= f.label(:search_term) %>
+  <%= f.text_field :search_term %>
+  <br />
+
+  <%= f.submit %>
+<% end %>
+
+	

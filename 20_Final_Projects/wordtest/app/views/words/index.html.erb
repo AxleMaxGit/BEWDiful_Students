@@ -1,0 +1,20 @@
+<h1>Enter a search term</h1>
+
+	<%= form_for @word do |f| %>
+
+	    <%= f.label(:search_term) %>
+	    <%= f.text_field :search_term %>
+	    <br /><br />
+
+	    <%= f.submit %>
+	<% end %>
+
+
+<ul>
+	<% @words.each do |word| %>
+		<li>
+			<%= word.search_term %>
+		</li>
+	<% end %>
+</ul>
+
